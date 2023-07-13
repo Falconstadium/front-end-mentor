@@ -1,2 +1,2 @@
 # front-end-mentor
-Product preview card component with html & css.
+Some projects from 'www.frontendmentor.com'.
