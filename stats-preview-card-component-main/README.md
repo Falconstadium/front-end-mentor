@@ -1,5 +1,5 @@
 # Frontend Mentor - Stats preview card component
-
+(for mobile screen only!!)
 ![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
