@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
+:root{
+  --Darkcyan: hsl(158, 36%, 37%);
+  --darker: hsl(158, 36%, 17%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --Montserrat: 'Montserrat', sans-serif;
+  --Fraunces: 'Fraunces', sans-serif;
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+  margin: 5%;
+  background-color: var(--Cream);
+  display: grid;
+  place-content: center;
+}
+
+.all{
+  display: grid;
+  overflow: hidden;
+  border-radius: 6px;
+  max-width: 600px;
+}
+.container{
+  background-color: var(--White);
+  padding: .5rem 2rem;
+}
+
+.title{
+  text-transform: uppercase;
+  font-family: var(--Montserrat);
+  color: var(--Darkgrayishblue);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  padding: 1rem 0;
+}
+
+h1{
+  font-family: var(--Fraunces);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  padding: .5rem .2rem;
+}
+
+.parag{
+  color: var(--Darkgrayishblue);
+  font-family: var(--Montserrat);
+  font-size: 14px;
+  padding: 1rem 0;
+}
+
+.price{
+  display: flex;
+  gap: 1em;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.solde{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--Fraunces);
+  color: var(--Darkcyan);
+}
+.original_price{
+  font-family: var(--Montserrat);
+  color: var(--Darkgrayishblue);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.cart{
+  background-color: var(--Darkcyan);
+  color: var(--White);
+  border: 0;
+  font-family: var(--Montserrat);
+  font-weight: 700;
+  font-size: .92rem;
+  padding: .5rem 5.7rem;
+  width: 100%;
+  margin: .5rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  gap: 1rem;
+}
+.cart:is(:hover, :focus){
+  background-color: var(--darker);
+}
+.cart::before{
+  content: '';
+  width: 15px;
+  height: 16px;
+  background-image: url('images/icon-cart.svg');
+}
+
+@media (min-width: 600px){
+  .all{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cart{
+    width: 100%;
+    padding: .5rem 1rem;
+  }
+}
+
+@media (max-width: 385px){
+  .cart{
+    width: 100%;
+    padding: 0.5rem .8rem;
+  }
+}
