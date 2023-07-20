@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+  --ff-inter: 'Inter', sans-serif;
+  --ff-lexendDeca: 'Lexend Deca', sans-serif;
+  --bg-main: hsl(233, 47%, 7%);
+  --bg-card: hsl(244, 38%, 16%);
+  --clr-soft: hsl(277, 64%, 61%);
+  --White-main: hsl(0, 0%, 100%);
+  --white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body{
+  background-color: var(--bg-main);
+  color: var(--White-main);
+  padding: 4rem 1.5rem;
+  display: grid;
+  place-content: center;
+}
+
+.container{
+  background-color: var(--bg-card);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.all{
+  padding: .5rem 2rem;
+}
+
+h1{
+  font-family: var(--ff-inter);
+  font-size: 1.65rem;
+  font-weight: 700;
+  padding: 1.75rem 2.7rem;
+  text-align: center;
+  line-height: 1.1;
+}
+#one{
+  color: var(--clr-soft);
+  font-size: 1.65rem;
+}
+
+.parag{
+  font-size: 12px;
+  font-family: var(--ff-lexendDeca);
+  color: var(--white-main-paragraph);
+  padding: 0 2.5rem;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.mini_title{
+  font-size: 15px;
+  font-family: var(--ff-inter);
+  padding: 1.75rem 0;
+  display: grid;
+  gap: 1.5em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+span{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.only{
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--white-stat-headings);
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 700px;
+    grid-template-columns: 50% 50%;
+    display: flex;
+    margin: 0 auto;
+  }
+  .all{
+    order: -1;
+    padding: 0 1rem;
+  }
+  h1{
+    text-align: start;
+    padding: 2rem 1rem;
+    font-size: 24px;
+  }
+  .parag{
+    text-align: start;
+    padding: 1rem .5rem;
+    width: 100%;
+  }
+  img{
+    width: 50rem;
+    height: 20rem;
+  }
+  .mini_title{
+    display: flex;
+    gap: 2em;
+  }
+  .mini_title span{
+    font-size: 16px;
+  }
+}
