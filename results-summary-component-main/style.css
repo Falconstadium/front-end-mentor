@@ -203,3 +203,23 @@ button:hover{
     margin-left: 1.2rem;
   }
 }
+
+@media (min-width: 768px) {
+  body{
+    max-width: 768px;
+    margin: 20rem auto;
+  }
+  .first-para{
+    height: 40vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  body{
+    max-width: 1024px;
+    margin: 7rem auto;
+  }
+  .first-para{
+    height: 60vh;
+  }
+}
