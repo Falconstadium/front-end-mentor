@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --primary: hsl(25, 97%, 53%);
+}
+
+* {
+  font-family: 'overpass', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--clr-white);
+}
+p {
+  color: var(--Light-Grey);
+  font-size: 15px;
+}
+button {
+  color: var(--Medium-Grey);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2em;
+  background: linear-gradient(var(--Dark-Blue), var(--Very-Dark-Blue));
+  border-radius: 0.8rem;
+  padding: 1.5rem 1.5rem;
+  max-width: 375px;
+}
+.container img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.submit {
+  background-color: var(--primary);
+  color: var(--clr-white);
+  width: 100%;
+  border: none;
+  border-radius: 1.5rem;
+  padding-block: 0.6rem;
+  cursor: pointer;
+  font-size: 1.025rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+.submit:is(:hover, :focus),
+.numbr button:hover {
+  color: var(--primary);
+  background-color: var(--clr-white);
+}
+.numbr button:focus {
+  background-color: var(--Medium-Grey);
+  color: var(--clr-white);
+}
+.numbr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.numbr button {
+  outline: none;
+  border: none;
+  background-color: var(--Dark-Blue);
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.main {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2em;
+  padding-bottom: 3rem;
+  display: none;
+}
+.main h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.main img {
+  margin: 0 auto;
+  width: 12rem;
+  height: 8rem;
+}
+.main .title {
+  text-align: center;
+  color: var(--primary);
+  background-color: var(--Dark-Blue);
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
